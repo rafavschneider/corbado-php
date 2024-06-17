@@ -5,10 +5,26 @@ namespace Corbado\Exceptions;
 use Throwable;
 
 class Standard extends \Exception {
-    private int $httpStatusCode;
-    private array $requestData;
-    private float $runtime;
-    private array $error;
+
+    /**
+     * @var int
+     */
+    private $httpStatusCode;
+
+    /**
+     * @var array
+     */
+    private $requestData;
+
+    /**
+     * @var float
+     */
+    private $runtime;
+
+    /**
+     * @var array
+     */
+    private $error;
 
     public function __construct(int $httpStatusCode, string $message, array $requestData, float $runtime, array $error)
     {

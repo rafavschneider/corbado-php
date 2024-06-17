@@ -15,7 +15,11 @@ use JetBrains\PhpStorm\ArrayShape;
 
 class EmailLinks
 {
-    private ClientInterface $client;
+
+    /**
+     * @var ClientInterface
+     */
+    private $client;
 
     public function __construct(ClientInterface $client)
     {

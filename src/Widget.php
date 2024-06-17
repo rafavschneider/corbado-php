@@ -25,7 +25,11 @@ use JetBrains\PhpStorm\ArrayShape;
 
 class Widget
 {
-    private ClientInterface $client;
+
+    /**
+     * @var ClientInterface
+     */
+    private $client;
 
     public function __construct(ClientInterface $client)
     {

@@ -6,12 +6,36 @@ use GuzzleHttp\Psr7\Request;
 
 class Client
 {
-    private \GuzzleHttp\ClientInterface $client;
-    private ?EmailLinks $emailLinks = null;
-    private ?SMSCodes $smsCodes = null;
-    private ?WebAuthn $webAuthn = null;
-    private ?Validation $validation = null;
-    private ?Widget $widget = null;
+
+    /**
+     * @var \GuzzleHttp\ClientInterface
+     */
+    private $client;
+
+    /**
+     * @var EmailLinks|null
+     */
+    private $emailLinks = null;
+
+    /**
+     * @var SMSCodes|null
+     */
+    private $smsCodes = null;
+
+    /**
+     * @var WebAuthn|null
+     */
+    private $webAuthn = null;
+
+    /**
+     * @var Validation|null
+     */
+    private $validation = null;
+
+    /**
+     * @var Widget|null
+     */
+    private $widget = null;
 
     public function __construct(string $username, string $password, string $baseURI = 'https://api.corbado.com/v1', ?\GuzzleHttp\ClientInterface $client = null)
     {

@@ -15,7 +15,11 @@ use JetBrains\PhpStorm\ArrayShape;
 
 class SMSCodes
 {
-    private ClientInterface $client;
+
+    /**
+     * @var ClientInterface
+     */
+    private $client;
 
     #[ArrayShape(['X-Corbado-ProjectID' => "string"])]
     private function generateHeaders(string $projectId): array
